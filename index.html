@@ -16,10 +16,13 @@
       border: none;
       height: 400px;
       width: 103%;
-      margin-top: -40px;
-      margin-left: -8px;
+      z-index: 0;
+      position: absolute;
+      top:0;
+      left:0;
     }
     #menu-btn {
+      z-index: 1;
       opacity: 0.1;
     }
     #menu-btn:hover {
@@ -33,16 +36,16 @@
 
 <body class="button left pushed">
   <div class="ui vertical inverted sidebar menu thin">
-    <a class="item" href="#" data-id="plex"><i class="facetime video icon"></i>Plex Media Server</a>
     <a class="item" href="#" data-id="couchpotato"><i class="video icon"></i>Couch Potato</a>
+    <a class="item" href="#" data-id="plex"><i class="facetime video icon"></i>Plex Media Server</a>
     <a class="item" href="#" data-id="sickbeard"><i class="calendar icon"></i>Sick Beard</a>
     <a class="item" href="#" data-id="transmission"><i class="tasks icon"></i>Transmission</a>
     <a class="item" href="#" data-id="sabnzbd"><i class="tasks icon"></i>SabNZBD+</a>
   </div>
+  <iframe id="service-frame" src=""></iframe>
   <a id="menu-btn" class="ui icon black button tiny black fixed">
     <i class="list layout icon"></i>
   </a>
-  <iframe id="service-frame" src=""></iframe>
   <script src="js/jquery.js"></script>
   <script src="js/semantic.js"></script>
   <script src="js/howe.js"></script>
