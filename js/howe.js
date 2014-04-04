@@ -39,10 +39,15 @@ $(document).ready(function() {
         frameResize();
     });
 
+    $("#close").on("click", function(){
+        $('.sidebar').sidebar('hide');
+    });
+
     //main
     frameResize();
-    var items = $(".item");
+    var items = $(".item .menu .item");
     if( items[0]){
         $(items[0]).trigger("click");
     }
+    $('.sidebar').sidebar('show');
 });
